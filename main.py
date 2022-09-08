@@ -78,7 +78,7 @@ website_entry.focus()
 
 user_entry = Entry(width=35)
 user_entry.grid(column=1, row=2, columnspan=2, sticky="EW")
-user_entry.insert(0, "berkaycolak42@gmail.com")
+user_entry.insert(0, "berkay@mail.com")
 
 pass_entry = Entry(width=21)
 pass_entry.grid(column=1, row=3, sticky="EW")
