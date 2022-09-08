@@ -5,6 +5,8 @@ import pyperclip
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
+
+
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
                'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
@@ -39,9 +41,10 @@ def save():
                                                               f"Password: {password} \n\nAll good to save?")
         if is_ok:
             with open("data.txt", "a") as ps:
-                  ps.write(f"{website} | {user} | {password}\n")
+                ps.write(f"{website} | {user} | {password}\n")
             website_entry.delete(0, "end")
             pass_entry.delete(0, "end")
+
 # ---------------------------- UI SETUP ------------------------------- #
 
 
@@ -80,7 +83,6 @@ user_entry.insert(0, "berkaycolak42@gmail.com")
 pass_entry = Entry(width=21)
 pass_entry.grid(column=1, row=3, sticky="EW")
 
-
 # Buttons
 
 gen_pass_button = Button(text="Generate Password", command=generate_password)
@@ -88,11 +90,6 @@ gen_pass_button.grid(column=2, row=3, sticky="EW")
 
 add_button = Button(text="Add", width=36, command=save)
 add_button.grid(column=1, row=4, columnspan=2, sticky="EW")
-
-
-
-
-
 
 window.mainloop()
 
